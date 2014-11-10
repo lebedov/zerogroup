@@ -1,0 +1,5 @@
+recursive-include examples *.py
+recursive-include zerogroup *.py
+include *.py
+include *.rst
+exclude MANIFEST.in
