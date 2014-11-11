@@ -9,7 +9,12 @@ from .version import __version__
 import re
 import threading as th
 
-import msgpack
+# Non-standard serialization support not mandatory:
+try:
+    import msgpack
+except:
+    pass
+
 import zmq
 from zmq.eventloop.ioloop import IOLoop
 from zmq.eventloop.zmqstream import ZMQStream
@@ -25,18 +30,18 @@ def istransport(t):
         return False
     else:
         return status
-                    
+
 class ZeroGroup(object):
     """
     ZeroMQ socket group wrapper.
 
-    Encapsulates a group of ZeroMQ sockets (and associated streams) 
+    Encapsulates a group of ZeroMQ sockets (and associated streams)
     sharing the same context and (for those sockets with streams) event loop.
 
     Parameters
     ----------
     context : zmq.Context
-        ZeroMQ context to use. If no context is specified, a 
+        ZeroMQ context to use. If no context is specified, a
         new one is created.
     ioloop : zmq.eventloop.ioloop.ZMQIOLoop
         IOLoop instance to use for event streams. If no instance is specified,
@@ -269,7 +274,7 @@ class ZeroGroup(object):
     def stop_loop(self, flush=False, stop_on_recv=False, stop_on_send=False):
         """
         Stop event loop.
-        
+
         Parameters
         ----------
         flush : bool
@@ -280,7 +285,7 @@ class ZeroGroup(object):
         """
 
         for stream in self.stream.values():
-            if flush: 
+            if flush:
                 stream.flush()
             if stop_on_recv:
                 stream.stop_on_recv()

@@ -46,6 +46,6 @@ if __name__ == "__main__":
         long_description = LONG_DESCRIPTION,
         url = URL,
         packages = PACKAGES,
-        install_requires = ['pyzmq',
-                            'msgpack-python>=0.4.0']
+        install_requires = ['pyzmq'],
+        extras_require = {'msgpack': ['msgpack-python>=0.4.0']}
         )
