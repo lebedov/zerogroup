@@ -5,6 +5,11 @@ Show how to prevent deadlocking because of traffic asymmetry
 by sending null messages for a while after signalling a quit.
 """
 
+# Copyright (c) 2014, Lev Givon
+# All rights reserved.
+# Distributed under the terms of the BSD license:
+# http://www.opensource.org/licenses/bsd-license
+
 import itertools, logging, time
 import threading as th
 import multiprocessing as mp
