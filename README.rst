@@ -8,10 +8,10 @@ Package Description
 ZeroGroup is a simple wrapper class for managing multiple ZeroMQ sockets and 
 streams.
 
-.. image:: https://pypip.in/version/zerogroup/badge.png
+.. image:: https://img.shields.io/pypi/v/zerogroup.svg
     :target: https://pypi.python.org/pypi/zerogroup
     :alt: Latest Version
-.. image:: https://pypip.in/d/zerogroup/badge.png
+.. image:: https://img.shields.io/pypi/dm/zerogroup.svg
     :target: https://pypi.python.org/pypi/zerogroup
     :alt: Downloads
 
