@@ -11,9 +11,6 @@ streams.
 .. image:: https://img.shields.io/pypi/v/zerogroup.svg
     :target: https://pypi.python.org/pypi/zerogroup
     :alt: Latest Version
-.. image:: https://img.shields.io/pypi/dm/zerogroup.svg
-    :target: https://pypi.python.org/pypi/zerogroup
-    :alt: Downloads
 
 Installation
 ------------
